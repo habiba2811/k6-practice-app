@@ -20,7 +20,7 @@ npm install
 - `script.js`: simple local check against `http://localhost:3000/`
 
 ## scenarios.js highlights
-- Uses checks for status and response content (`QuickPizza`).
+- Uses checks for status and response content.
 - Tracks custom metrics:
   - `my_counter` (`Counter`)
   - `response_time_admin_page` (`Trend`)
