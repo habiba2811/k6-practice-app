@@ -20,6 +20,9 @@ k6 run breakpoint-test.js
 k6 run scenarios.js
 k6 run system-tags.js
 k6 run custom-tags.js
+k6 run groups.js --summary-mode=full
+k6 run lifecycle.js
+k6 run abort.js
 k6 run script.js
 ```
 
@@ -34,6 +37,9 @@ k6 run script.js
 - `scenarios.js`: thresholds, checks, counters, trends, and execution context practice
 - `system-tags.js`: system-tag threshold example 
 - `custom-tags.js`: custom tag example and tagged error metrics
+- `groups.js`: nested `group()` usage and full summary output with group sections
+- `lifecycle.js`: `setup()`, default function, and `teardown()` lifecycle practice
+- `abort.js`: abort and fail flow practice
 - `script.js`: basic local endpoint check
 
 ## Metrics Practice
@@ -41,7 +47,7 @@ k6 run script.js
 `scenarios.js` includes:
 
 - checks for response status and response content
-- a custom `Counter` and `Trend` metrices
+- a custom `Counter` and `Trend` metrics
 - threshold examples for duration, failure rate, request count, VUs, checks, and custom metrics
 
 `system-tags.js` demonstrates:
@@ -54,3 +60,6 @@ k6 run script.js
 - filtering thresholds by custom tag values
 - recording a tagged custom error counter
 
+`groups.js` demonstrates:
+
+- nested groups such as `Main page`, `Assets`, and `Login page`
