@@ -1,161 +1,161 @@
 {
-    "metrics": {
-        "http_req_connecting": {
-            "avg": 32.7403,
-            "min": 0,
-            "med": 0,
-            "max": 130.9612,
-            "p(90)": 91.67284000000002,
-            "p(95)": 111.31701999999994
-        },
-        "http_req_duration": {
-            "avg": 164.915125,
-            "min": 129.34,
-            "med": 132.49205,
-            "max": 265.3364,
-            "p(90)": 225.93539000000004,
-            "p(95)": 245.63589499999998,
-            "thresholds": {
-                "p(95)<1000": false
-            }
-        },
-        "vus_max": {
-            "value": 1,
-            "min": 1,
-            "max": 1
-        },
-        "data_received": {
-            "count": 29276,
-            "rate": 14286.67076456039
-        },
-        "group_duration": {
-            "max": 918.12,
-            "p(90)": 814.69444,
-            "p(95)": 866.4072199999999,
-            "avg": 483.366,
-            "min": 130.9858,
-            "med": 400.9922
-        },
-        "http_req_receiving": {
-            "avg": 32.544675000000005,
-            "min": 0,
-            "med": 1.06535,
-            "max": 128.048,
-            "p(90)": 90.11114000000002,
-            "p(95)": 109.07956999999996
-        },
-        "http_req_duration{expected_response:true}": {
-            "p(95)": 245.63589499999998,
-            "avg": 164.915125,
-            "min": 129.34,
-            "med": 132.49205,
-            "max": 265.3364,
-            "p(90)": 225.93539000000004
-        },
-        "iteration_duration": {
-            "max": 2049.2045,
-            "p(90)": 2049.2045,
-            "p(95)": 2049.2045,
-            "avg": 2049.2045,
-            "min": 2049.2045,
-            "med": 2049.2045
-        },
-        "http_req_sending": {
-            "avg": 0.307725,
-            "min": 0,
-            "med": 0.2954,
-            "max": 0.6401,
-            "p(90)": 0.62531,
-            "p(95)": 0.632705
-        },
-        "checks": {
-            "passes": 1,
-            "fails": 0,
-            "value": 1
-        },
-        "iterations": {
-            "rate": 0.48799941127751023,
-            "count": 1
-        },
-        "data_sent": {
-            "count": 2792,
-            "rate": 1362.4943562868086
-        },
-        "http_reqs": {
-            "count": 4,
-            "rate": 1.951997645110041
-        },
-        "http_req_tls_handshaking": {
-            "p(90)": 113.94019000000003,
-            "p(95)": 138.35594499999996,
-            "avg": 40.692925,
-            "min": 0,
-            "med": 0,
-            "max": 162.7717
-        },
-        "vus": {
-            "value": 1,
-            "min": 1,
-            "max": 1
-        },
-        "http_req_blocked": {
-            "p(95)": 328.20242499999983,
-            "avg": 96.530125,
-            "min": 0,
-            "med": 0,
-            "max": 386.1205,
-            "p(90)": 270.2843500000001
-        },
-        "http_req_waiting": {
-            "max": 137.2884,
-            "p(90)": 136.30178999999998,
-            "p(95)": 136.795095,
-            "avg": 132.06272499999997,
-            "min": 128.161,
-            "med": 131.40075
-        },
-        "http_req_failed": {
-            "passes": 0,
-            "fails": 4,
-            "value": 0
-        }
+  "metrics": {
+    "http_req_connecting": {
+      "avg": 32.7403,
+      "min": 0,
+      "med": 0,
+      "max": 130.9612,
+      "p(90)": 91.67284000000002,
+      "p(95)": 111.31701999999994
     },
-    "root_group": {
-        "groups": {
-            "Main page": {
-                "checks": {
-                    "status is 200": {
-                        "name": "status is 200",
-                        "path": "::Main page::status is 200",
-                        "id": "ddd85edb8976c262aeb288a9a9bebe81",
-                        "passes": 1,
-                        "fails": 0
-                    }
-                },
-                "name": "Main page",
-                "path": "::Main page",
-                "id": "0ba9ef98c997a62e810e809d36824417",
-                "groups": {
-                    "Assets": {
-                        "checks": {},
-                        "name": "Assets",
-                        "path": "::Main page::Assets",
-                        "id": "c33d32a33693d074f0338b5d4f7c5940",
-                        "groups": {}
-                    }
-                }
-            },
-            "Login page": {
-                "path": "::Login page",
-                "id": "2ed90ed00c896e452bb028d3bba468d4",
-                "groups": {},
-                "checks": {},
-                "name": "Login page"
-            }
-        },
-        "checks": {},
-        "name": "",
-        "path": "",
-        "id": "d41d8cd98f00b204e9800998ecf8427e"
+    "http_req_duration": {
+      "avg": 164.915125,
+      "min": 129.34,
+      "med": 132.49205,
+      "max": 265.3364,
+      "p(90)": 225.93539000000004,
+      "p(95)": 245.63589499999998,
+      "thresholds": {
+        "p(95)<1000": false
+      }
+    },
+    "vus_max": {
+      "value": 1,
+      "min": 1,
+      "max": 1
+    },
+    "data_received": {
+      "count": 29276,
+      "rate": 14286.67076456039
+    },
+    "group_duration": {
+      "max": 918.12,
+      "p(90)": 814.69444,
+      "p(95)": 866.4072199999999,
+      "avg": 483.366,
+      "min": 130.9858,
+      "med": 400.9922
+    },
+    "http_req_receiving": {
+      "avg": 32.544675000000005,
+      "min": 0,
+      "med": 1.06535,
+      "max": 128.048,
+      "p(90)": 90.11114000000002,
+      "p(95)": 109.07956999999996
+    },
+    "http_req_duration{expected_response:true}": {
+      "p(95)": 245.63589499999998,
+      "avg": 164.915125,
+      "min": 129.34,
+      "med": 132.49205,
+      "max": 265.3364,
+      "p(90)": 225.93539000000004
+    },
+    "iteration_duration": {
+      "max": 2049.2045,
+      "p(90)": 2049.2045,
+      "p(95)": 2049.2045,
+      "avg": 2049.2045,
+      "min": 2049.2045,
+      "med": 2049.2045
+    },
+    "http_req_sending": {
+      "avg": 0.307725,
+      "min": 0,
+      "med": 0.2954,
+      "max": 0.6401,
+      "p(90)": 0.62531,
+      "p(95)": 0.632705
+    },
+    "checks": {
+      "passes": 1,
+      "fails": 0,
+      "value": 1
+    },
+    "iterations": {
+      "rate": 0.48799941127751023,
+      "count": 1
+    },
+    "data_sent": {
+      "count": 2792,
+      "rate": 1362.4943562868086
+    },
+    "http_reqs": {
+      "count": 4,
+      "rate": 1.951997645110041
+    },
+    "http_req_tls_handshaking": {
+      "p(90)": 113.94019000000003,
+      "p(95)": 138.35594499999996,
+      "avg": 40.692925,
+      "min": 0,
+      "med": 0,
+      "max": 162.7717
+    },
+    "vus": {
+      "value": 1,
+      "min": 1,
+      "max": 1
+    },
+    "http_req_blocked": {
+      "p(95)": 328.20242499999983,
+      "avg": 96.530125,
+      "min": 0,
+      "med": 0,
+      "max": 386.1205,
+      "p(90)": 270.2843500000001
+    },
+    "http_req_waiting": {
+      "max": 137.2884,
+      "p(90)": 136.30178999999998,
+      "p(95)": 136.795095,
+      "avg": 132.06272499999997,
+      "min": 128.161,
+      "med": 131.40075
+    },
+    "http_req_failed": {
+      "passes": 0,
+      "fails": 4,
+      "value": 0
     }
+  },
+  "root_group": {
+    "groups": {
+      "Main page": {
+        "checks": {
+          "status is 200": {
+            "name": "status is 200",
+            "path": "::Main page::status is 200",
+            "id": "ddd85edb8976c262aeb288a9a9bebe81",
+            "passes": 1,
+            "fails": 0
+          }
+        },
+        "name": "Main page",
+        "path": "::Main page",
+        "id": "0ba9ef98c997a62e810e809d36824417",
+        "groups": {
+          "Assets": {
+            "checks": {},
+            "name": "Assets",
+            "path": "::Main page::Assets",
+            "id": "c33d32a33693d074f0338b5d4f7c5940",
+            "groups": {}
+          }
+        }
+      },
+      "Login page": {
+        "path": "::Login page",
+        "id": "2ed90ed00c896e452bb028d3bba468d4",
+        "groups": {},
+        "checks": {},
+        "name": "Login page"
+      }
+    },
+    "checks": {},
+    "name": "",
+    "path": "",
+    "id": "d41d8cd98f00b204e9800998ecf8427e"
+  }
 }

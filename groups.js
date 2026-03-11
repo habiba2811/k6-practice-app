@@ -7,8 +7,7 @@ export const options = {
     'group_duration{group:::Main page}': ['p(95)<8000'],
     'group_duration{group:::Main page::Assets}': ['p(95)<3000'],
     'group_duration{group:::Login page}': ['p(95)<6000'],
-    'http_req_duration{expected_response:true}': ['p(95)<1000']
-
+    'http_req_duration{expected_response:true}': ['p(95)<1000'],
   },
 }
 
@@ -24,8 +23,8 @@ export default function () {
   })
 
   group('Login page', function () {
-   http.get('https://deelay.me/5000/https://api.example.com/data')
-   // http.get('https://b36bf4a706d6461b9ccd9250a8d56d20.api.mockbin.io/') // -> to smuilate 503 api error
+    http.get('https://deelay.me/5000/https://api.example.com/data')
+    // http.get('https://b36bf4a706d6461b9ccd9250a8d56d20.api.mockbin.io/') // -> to smuilate 503 api error
   })
 
   sleep(1)
