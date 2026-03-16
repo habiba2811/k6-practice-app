@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'grafana/k6:latest'
+            args '--entrypoint=""'
+        }
+    }
 
     stages {
         stage('Run K6 Test') {
