@@ -1,37 +1,39 @@
 # k6 Practice App
 
-Practice repository for learning `k6` with small, focused scripts that cover common load-testing patterns, checks, thresholds, tags, groups, lifecycle hooks, and local API flows.
+`k6` scripts for public endpoint testing and local API performance testing. It covers request validation, authenticated API flows, custom metrics, thresholds, grouped scenarios, lifecycle hooks, randomized test data, and external datasets.
 
-## What This Repo Covers
+## Project Coverage
 
-- Smoke, load, stress, spike, soak, and breakpoint-style tests
-- Checks and thresholds
-- Custom metrics and tags
-- Grouped requests and group-specific thresholds
-- `setup()` and `teardown()` lifecycle flow
-- Local API testing with `GET`, `POST`, `PUT`, `PATCH`, and `DELETE`
+- Baseline HTTP scripts for simple `GET` and `POST` testing
+- End-to-end authenticated API flows for register, login, list, create, read, update, and delete operations
+- Common performance test patterns: smoke, load, stress, spike, soak, and breakpoint tests
+- Utility scripts for randomized input, randomized think time, and random entity selection
+- Example data-driven tests using CSV and JSON files
+- k6 scripts with checks, thresholds, tags, counters, trends, and failure logging
+- Writing reusable `k6` test scripts for API validation and performance testing
+- Testing authenticated REST APIs with dynamic test data
+- Simulating realistic user behavior with random credentials and variable delays
+- Organizing tests by purpose: basic requests, scenarios, lifecycle behavior, and load profiles
+- Working with external datasets through `SharedArray`
+- Measuring quality with checks, response-time thresholds, and tagged requests
 
-## Script Guide
+## Repository Highlights
 
-- [`smoke-test.js`](/e:/k6-practice/k6-practice-app/smoke-test.js): 1 VU for 30 seconds against QuickPizza
-- [`load-test.js`](/e:/k6-practice/k6-practice-app/load-test.js): ramps to 10 VUs, holds, then ramps down
-- [`stress-test.js`](/e:/k6-practice/k6-practice-app/stress-test.js): pushes the target harder with a larger ramp
-- [`spike-test.js`](/e:/k6-practice/k6-practice-app/spike-test.js): sudden jump in load, then recovery
-- [`soak-test.js`](/e:/k6-practice/k6-practice-app/soak-test.js): long-duration high-concurrency run
-- [`breakpoint-test.js`](/e:/k6-practice/k6-practice-app/breakpoint-test.js): keeps scaling to probe system limits
-- [`scenarios.js`](/e:/k6-practice/k6-practice-app/scenarios.js): checks, thresholds, counters, trends, and execution context
-- [`system-tags.js`](/e:/k6-practice/k6-practice-app/system-tags.js): thresholds filtered with built-in system tags
-- [`custom-tags.js`](/e:/k6-practice/k6-practice-app/custom-tags.js): custom tags plus a tagged custom error counter
-- [`groups.js`](/e:/k6-practice/k6-practice-app/groups.js): nested groups and group-specific thresholds
-- [`lifecycle.js`](/e:/k6-practice/k6-practice-app/lifecycle.js): `init`, `setup`, VU, and `teardown` stages
-- [`abort.js`](/e:/k6-practice/k6-practice-app/abort.js): aborting a test from `setup()` when a dependency is unavailable
-- [`script.js`](/e:/k6-practice/k6-practice-app/script.js): basic local health-style check for `http://localhost:3000/`
-- [`http-get.js`](/e:/k6-practice/k6-practice-app/http-get.js): reads public crocodile data from the local API and validates the response
-- [`http-post.js`](/e:/k6-practice/k6-practice-app/http-post.js): registers a user, logs in, then exercises authenticated CRUD operations against `/my/crocodiles/`
+- [http-post.js](/e:/k6-practice/k6-practice-app/http-post.js): authenticated CRUD flow using generated credentials
+- [k6-test-api.js](/e:/k6-practice/k6-practice-app/k6-test-api.js): more complete staged API test with thresholds, tags, random waits, and failure reporting
+- [smoke-test.js](/e:/k6-practice/k6-practice-app/smoke-test.js), [load-test.js](/e:/k6-practice/k6-practice-app/load-test.js), [stress-test.js](/e:/k6-practice/k6-practice-app/stress-test.js), [spike-test.js](/e:/k6-practice/k6-practice-app/spike-test.js), [soak-test.js](/e:/k6-practice/k6-practice-app/soak-test.js), [breakpoint-test.js](/e:/k6-practice/k6-practice-app/breakpoint-test.js): different load profiles
+- [scenarios.js](/e:/k6-practice/k6-practice-app/scenarios.js), [groups.js](/e:/k6-practice/k6-practice-app/groups.js), [lifecycle.js](/e:/k6-practice/k6-practice-app/lifecycle.js), [custom-tags.js](/e:/k6-practice/k6-practice-app/custom-tags.js), [system-tags.js](/e:/k6-practice/k6-practice-app/system-tags.js), [abort.js](/e:/k6-practice/k6-practice-app/abort.js): advanced k6 features
+- [random-item.js](/e:/k6-practice/k6-practice-app/random-item.js), [random-sleep.js](/e:/k6-practice/k6-practice-app/random-sleep.js), [random-string.js](/e:/k6-practice/k6-practice-app/random-string.js): helper-focused practice scripts
+- [examples/csv/external-csv.js](/e:/k6-practice/k6-practice-app/examples/csv/external-csv.js) and [external-json.js](/e:/k6-practice/k6-practice-app/external-json.js): data-driven testing from external files
 
-## Targets Used
+## Running the Project
 
-- `https://quickpizza.grafana.com/`
-- generated `mockbin.io` endpoints in some example scripts
-- `http://localhost:3000/`
-- `http://localhost:8000/`
+Examples:
+
+```bash
+k6 run script.js
+k6 run http-get.js
+k6 run http-post.js
+k6 run k6-test-api.js
+k6 run smoke-test.js
+```

@@ -1,17 +1,17 @@
 import http from 'k6/http'
 import { check } from 'k6'
+import { randomItem } from 'https://jslib.k6.io/k6-utils/1.2.0/index.js'
 
 export default function () {
   let res = http.get('http://localhost:8000/public/crocodiles/')
   const crocodiles = res.json()
-  const crocodileId = crocodiles[6].id
-  const crocadileName = crocodiles[6].name
+  const crocodileIds = crocodiles.map((item) => item.id)
+  const crocodileId = randomItem(crocodileIds)
 
   res = http.get(`http://localhost:8000/public/crocodiles/${crocodileId}`)
-  console.log(res.headers['Content-Type'])
 
   check(res, {
     'status is 200': (r) => r.status === 200,
-    'Crocodile is Sobek': (r) => r.json().name === crocadileName,
+    'Crocodile is Sobek': (r) => r.json().id === crocodileId,
   })
 }
