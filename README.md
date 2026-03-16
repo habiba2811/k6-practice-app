@@ -1,4 +1,11 @@
 # k6 Practice App
+![k6](https://img.shields.io/badge/k6-Performance_Testing-7D64FF)
+![JavaScript](https://img.shields.io/badge/JavaScript-Scripting-F7DF1E)
+![REST API](https://img.shields.io/badge/REST_API-Testing-orange)
+![Load Testing](https://img.shields.io/badge/Load-Testing-blue)
+![Stress Testing](https://img.shields.io/badge/Stress-Testing-red)
+![Spike Testing](https://img.shields.io/badge/Spike-Testing-purple)
+![Data Driven](https://img.shields.io/badge/Data--Driven-Testing-yellow)
 
 `k6` scripts for public endpoint testing and local API performance testing. It covers request validation, authenticated API flows, custom metrics, thresholds, grouped scenarios, lifecycle hooks, randomized test data, and external datasets.
 
